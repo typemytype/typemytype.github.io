@@ -37,7 +37,16 @@
     <div id="main" role="main" class="container">
       {{ content }}
     </div>
-
+    
+    <div id="categories">
+      <ul id="categories">
+        {% for category in site.categories %}
+        <li><a href="/{{category}}/">{{ category }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    
+    </div>
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
