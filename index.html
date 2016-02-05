@@ -3,7 +3,9 @@ layout: default
 ---
 {% for repository in site.github.public_repositories %}
 
-    <h2> [{{ repository.name }}]({{ repository.html_url }}) <h2>
+    <h2>
+        <a href="{{ repository.html_url }}">{{ repository.name }}</a>
+    </h2>
 
     {% if repository.description %}
         <div class="description">{{ repository.description }}</div>
