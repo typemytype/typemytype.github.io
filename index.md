@@ -9,7 +9,7 @@ layout: default
 {{ repository.description }}
 {% endif %}
 
-{% if repository.has_issues %}
+{% if repository.open_issues_count > 0 %}
 Open issues: [{{ repository.open_issues_count }}]({{ repository.issues_url }})
 {% endif %}
 {% endfor %}
