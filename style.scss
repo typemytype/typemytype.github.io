@@ -68,11 +68,15 @@ a {
       background-color: rgba($defaultLinkColor, .4);
     }
 
-.description, .issues {
+.item {
   margin-left: 10px;
-  margin-bottom: 5px;
-  margin-top: 5px;
+  p {
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
 }
+
+
 
 .issues {
   color: orange;

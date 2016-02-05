@@ -7,13 +7,20 @@ layout: default
         <a href="{{ repository.html_url }}">{{ repository.name }}</a>
     </h2>
 
-    {% if repository.description %}
-        <div class="description">{{ repository.description }}</div>
-    {% endif %}
+    <div class="item">
+        {% if repository.description %}
+            <p class="description">{{ repository.description }}</p>
+        {% endif %}
 
-    {% if repository.open_issues_count > 0 %}
-        <div class="issues">
-            <a href="{{ repository.issues_url }}">Open issues: {{ repository.open_issues_count }}</a>
-        </div>
-    {% endif %}
+        {% if repository.has_pages %}
+            <p>
+                <a href="http://{{ site.gitub.url }}/ {{ repository.name }}"></a>
+            </p>
+        {% endif %}
+        {% if repository.open_issues_count > 0 %}
+            <p class="issues">
+                <a href="{{ repository.issues_url }}">Open issues: {{ repository.open_issues_count }}</a>
+            </p>
+        {% endif %}
+    </div>
 {% endfor %}
