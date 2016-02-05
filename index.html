@@ -12,9 +12,9 @@ layout: default
             <p class="description">{{ repository.description }}</p>
         {% endif %}
 
-        {% if repository.has_pages %}
+        {% if repository.homepage %}
             <p>
-                <a href="http://{{ site.gitub.url }}/ {{ repository.name }}"></a>
+                <a href="http://{{ repository.homepage}}">{{ repository.name }}</a>
             </p>
         {% endif %}
         {% if repository.open_issues_count > 0 %}
