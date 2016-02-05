@@ -11,12 +11,6 @@ layout: default
         {% if repository.description %}
             <p class="description">{{ repository.description }}</p>
         {% endif %}
-
-        {% if repository.homepage %}
-            <p>
-                <a href="http://{{ repository.homepage}}">{{ repository.name }}</a>
-            </p>
-        {% endif %}
         {% if repository.open_issues_count > 0 %}
             <p class="issues">
                 <a href="{{ repository.issues_url }}">Open issues: {{ repository.open_issues_count }}</a>
