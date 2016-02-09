@@ -1,0 +1,14 @@
+<h2>
+    <a href="{{ repository.html_url }}">{{ repository.name }}</a>
+</h2>
+
+<div class="item">
+    {% if repository.description %}
+        <p class="description">{{ repository.description }}</p>
+    {% endif %}
+    {% if repository.open_issues_count > 0 %}
+        <p class="issues">
+            <a href="{{ repository.issues_url }}">Open issues: {{ repository.open_issues_count }}</a>
+        </p>
+    {% endif %}
+</div>
