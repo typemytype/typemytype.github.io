@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-{% for repository in site.github.public_repositories | sort:"open_issues_count" %}
-
+{% assign repositories = site.github.public_repositories | sort:"open_issues_count" %}
+{% for repository in repositories %}
     <h2>
         <a href="{{ repository.html_url }}">{{ repository.name }}</a>
     </h2>
