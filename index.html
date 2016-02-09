@@ -1,16 +1,15 @@
 ---
 layout: default
 ---
-{% assign repositories = site.github.public_repositories | sort:"open_issues_count" | reverse %}
-{% for repository in repositories %}
-    {% if repository.open_issues_count > 0 %}
-        {% include repository.html %}
-    {% endif %}
-{% endfor %}
-
 
 {% for repository in site.github.public_repositories %}
-    {% if repository.open_issues_count == 0 %}
-        {% include repository.html %}
-    {% endif %}
+    <h2>
+        <a href="{{ repository.html_url }}">{{ repository.name }}</a>
+    </h2>
+
+    <div class="item">
+        {% if repository.description %}
+            <p class="description">{{ repository.description }}</p>
+        {% endif %}
+    </div>
 {% endfor %}
